@@ -1,0 +1,14 @@
+[
+  {
+    "searchKeyword": "Serenity BDD",
+    "expectedFirstResult": "Serenity BDD"
+  },
+  {
+    "searchKeyword": "Serenity WebElement Facade",
+    "expectedFirstResult": "Serenity WebElement Facade"
+  },
+  {
+    "searchKeyword": "Serenity Page Object",
+    "expectedFirstResult": "Serenity Page Object"
+  }
+]
