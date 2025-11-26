@@ -23,7 +23,7 @@ pipeline {
 
   post {
     always {
-      archiveArtifacts artifacts: 'target/site/serenity/index.html', allowEmptyArchive: true, fingerprint: true
+      archiveArtifacts artifacts: 'target/serenity-reports/index.html', allowEmptyArchive: true, fingerprint: true
     }
   }
 }
