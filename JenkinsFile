@@ -1,0 +1,29 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm 'https://github.com/cprash/Serenity_Cucumber_Junit4_Junit5.git'
+      }
+    }
+
+    stage('Build & Test') {
+      steps {
+        script {
+          if (isUnix()) {
+            sh 'mvn clean verify'
+          } else {
+            bat 'mvn clean verify'
+          }
+        }
+      }
+    }
+  }
+
+  post {
+    always {
+      archiveArtifacts artifacts: 'target/site/serenity/index.html', allowEmptyArchive: true, fingerprint: true
+    }
+  }
+}
